@@ -5,6 +5,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet" />
+    <script type='text/javascript'>
+      function loadInnerForm () {
+       $('#iframe-container').html('<iframe src="./innerform.html"></iframe>');
+      }
+    </script>
   </head>
   <body>
     <form>
@@ -12,13 +17,10 @@
         <label>Foo</label>
         <input type="text" class="form-control" />
       </div>
-      <div class="form-group">
-        <label>Bar</label>
-        <input type="text" class="form-control" />
+      <div>
+        <button type="button" class="btn btn-primary" onClick="loadInnerForm();">Load Inner Form</button>
       </div>
-      <div class="form-group">
-        <input type="submit" class="btn btn-primary" />
-      </div>
+      <div id="iframe-container"></div>
     </form>
   </body>
 </html>
